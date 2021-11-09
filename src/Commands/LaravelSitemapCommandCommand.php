@@ -13,13 +13,11 @@ class LaravelSitemapCommandCommand extends Command
 
     public function handle(): int
     {
-        if (config('sitemap-command.website_url')) {
+        if (strlen(config('sitemap-command.website_url'))) {
             SitemapGenerator::create(config('sitemap-command.website_url'))->writeToFile(public_path('/sitemap.xml'));
-
             return self::SUCCESS;
         } else {
             $this->error('Please setup an valid APP_URL in your .env file');
-
             return self::INVALID;
         }
     }
