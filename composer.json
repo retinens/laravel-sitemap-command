@@ -1,24 +1,25 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "retinens/laravel-sitemap-command",
+    "description": "A automatic command to refresh the sitemap on the website, using spatie/laravel-sitemap behind the scenes",
     "keywords": [
-        ":vendor_name",
+        "retinens",
         "laravel",
-        ":package_slug"
+        "laravel-sitemap-command"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/retinens/laravel-sitemap-command",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "WhereIsLucas",
+            "email": "lucas@retinens.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
+        "illuminate/contracts": "^8.37",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.37"
+        "spatie/laravel-sitemap": "^6.0"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
@@ -34,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Retinens\\LaravelSitemapCommand\\": "src",
+            "Retinens\\LaravelSitemapCommand\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Retinens\\LaravelSitemapCommand\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +55,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Retinens\\LaravelSitemapCommand\\LaravelSitemapCommandServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "LaravelSitemapCommand": "Retinens\\LaravelSitemapCommand\\LaravelSitemapCommandFacade"
             }
         }
     },
