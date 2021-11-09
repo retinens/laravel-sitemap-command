@@ -18,7 +18,7 @@ class LaravelSitemapCommandServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-sitemap-command')
-            ->hasConfigFile()
+            ->hasConfigFile("laravel-sitemap-command")
             ->hasCommand(LaravelSitemapCommandCommand::class);
     }
 
