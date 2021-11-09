@@ -25,7 +25,7 @@ class LaravelSitemapCommandServiceProvider extends PackageServiceProvider
     public function packageBooted()
     {
         $this->app->afterResolving(Schedule::class, function (Schedule $schedule) {
-            $schedule->command(LaravelSitemapCommandCommand::class)->everyDay();
+            $schedule->command(LaravelSitemapCommandCommand::class)->daily();
         });
     }
 }
