@@ -2,10 +2,10 @@
 
 namespace Retinens\LaravelSitemapCommand;
 
+use Illuminate\Console\Scheduling\Schedule;
 use Retinens\LaravelSitemapCommand\Commands\LaravelSitemapCommandCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Illuminate\Console\Scheduling\Schedule;
 
 class LaravelSitemapCommandServiceProvider extends PackageServiceProvider
 {
