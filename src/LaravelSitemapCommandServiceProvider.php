@@ -2,9 +2,10 @@
 
 namespace Retinens\LaravelSitemapCommand;
 
+use Retinens\LaravelSitemapCommand\Commands\LaravelSitemapCommandCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Retinens\LaravelSitemapCommand\Commands\LaravelSitemapCommandCommand;
+use Illuminate\Console\Scheduling\Schedule;
 
 class LaravelSitemapCommandServiceProvider extends PackageServiceProvider
 {
@@ -19,5 +20,12 @@ class LaravelSitemapCommandServiceProvider extends PackageServiceProvider
             ->name('laravel-sitemap-command')
             ->hasConfigFile()
             ->hasCommand(LaravelSitemapCommandCommand::class);
+    }
+
+    public function packageBooted()
+    {
+        $this->app->afterResolving(Schedule::class, function (Schedule $schedule) {
+            $schedule->command(LaravelSitemapCommandCommand::class)->everyDay();
+        });
     }
 }
