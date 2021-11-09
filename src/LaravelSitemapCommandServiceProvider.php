@@ -2,9 +2,9 @@
 
 namespace Retinens\LaravelSitemapCommand;
 
+use Retinens\LaravelSitemapCommand\Commands\LaravelSitemapCommandCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Retinens\LaravelSitemapCommand\Commands\LaravelSitemapCommandCommand;
 
 class LaravelSitemapCommandServiceProvider extends PackageServiceProvider
 {
