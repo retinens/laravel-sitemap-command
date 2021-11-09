@@ -14,7 +14,7 @@ class LaravelSitemapCommandCommand extends Command
     public function handle(): int
     {
         if (config('sitemap-commands.website_url')) {
-            SitemapGenerator::create(config('sitemap-commands.website_url'))->writeToFile(public_path('/sitemap.xml'));
+            SitemapGenerator::create(config('sitemap-command.website_url'))->writeToFile(public_path('/sitemap.xml'));
 
             return self::SUCCESS;
         } else {
