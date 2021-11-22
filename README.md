@@ -7,13 +7,7 @@
 
 A automatic command to refresh the sitemap on the website, using spatie/laravel-sitemap behind the scenes.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-sitemap-command.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-sitemap-command)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+The package register and schedule an Artisan command to refresh the sitemap. 
 
 ## Installation
 
@@ -22,8 +16,6 @@ You can install the package via composer:
 ```bash
 composer require retinens/laravel-sitemap-command
 ```
-
-You can publish and run the migrations with:
 
 You can publish the config file with:
 ```bash
@@ -34,7 +26,7 @@ This is the contents of the published config file:
 
 ```php
 return [
-'website_url' => 
+    'website_url' => env('APP_URL')
 ];
 ```
 
