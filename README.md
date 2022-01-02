@@ -17,6 +17,12 @@ You can install the package via composer:
 composer require retinens/laravel-sitemap-command
 ```
 
+Don't forget to add the sitemap.xml file in your gitignore
+```bash
+/public/sitemap.xml
+```
+
+
 You can publish the config file with:
 ```bash
 php artisan vendor:publish --tag="laravel-sitemap-command-config"
